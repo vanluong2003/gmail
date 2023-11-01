@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="profile_circle_width_height">48dp</dimen>
+    <dimen name="default_content_padding">8dp</dimen>
+    <dimen name="distance_from_screen_edge">16dp</dimen>
+
+
+    <!-- Text Related-->
+    <dimen name="bigHeadingTextSize">20sp</dimen>
+    <dimen name="headingTextSize">16sp</dimen>
+    <dimen name="subheadingTextSize">14sp</dimen>
+    <dimen name="floating_action_button_width_height">48dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+
+
+    <!-- Layout Related-->
+    <dimen name="detail_layout_width">400dp</dimen>
+
+</resources>

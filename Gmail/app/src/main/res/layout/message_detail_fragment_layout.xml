@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/messagesDetailToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar_height"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ToolBarStyle"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/toolbar_height">
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal"
+            android:layout_width="@dimen/detail_layout_width"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/distance_from_screen_edge">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/message_subject"
+                android:textSize="@dimen/bigHeadingTextSize"
+                style="@style/bigHeadingTextStyle"
+                android:textColor="@color/heading_text_color"/>
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/distance_from_screen_edge">
+
+                <ImageView
+                    android:id="@+id/sender_profile_picture"
+                    android:layout_width="@dimen/profile_circle_width_height"
+                    android:layout_height="@dimen/profile_circle_width_height"
+                    android:src="@drawable/circle"
+                    android:contentDescription="@string/profile_picture" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/distance_from_screen_edge"
+                    android:paddingStart="@dimen/distance_from_screen_edge"
+                    android:paddingEnd="0dp"
+                    android:paddingRight="0dp">
+
+                    <TextView
+                        android:id="@+id/sender_name"
+                        style="@style/headingTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/sender_name"
+                        android:textColor="@color/heading_text_color" />
+
+                    <TextView
+                        android:id="@+id/timeTV"
+                        style="@style/subHeadingTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/time"
+                        android:textColor="@color/subheading_text_color" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/message_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/message_body"
+                android:layout_marginTop="@dimen/distance_from_screen_edge"
+                android:layout_marginBottom="@dimen/distance_from_screen_edge"
+                android:textColor="@color/heading_text_color"
+                android:paddingBottom="@dimen/distance_from_screen_edge"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        android:src="@drawable/ic_reply"
+        android:theme="@style/FabStyle"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/distance_from_screen_edge"/>
+
+</android.support.design.widget.CoordinatorLayout>

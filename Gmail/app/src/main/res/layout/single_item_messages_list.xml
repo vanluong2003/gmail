@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="@dimen/distance_from_screen_edge">
+
+    <ImageView
+        android:id="@+id/sender_profile_picture"
+        android:layout_width="@dimen/profile_circle_width_height"
+        android:layout_height="@dimen/profile_circle_width_height"
+        android:src="@drawable/circle"
+        android:contentDescription="@string/profile_picture" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/distance_from_screen_edge"
+        android:paddingStart="@dimen/distance_from_screen_edge"
+        android:paddingEnd="0dp"
+        android:paddingRight="0dp">
+
+        <TextView
+            android:id="@+id/sender_name"
+            style="@style/headingTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/sender_name"
+            android:textColor="@color/heading_text_color" />
+
+        <TextView
+            android:id="@+id/message_subject"
+            style="@style/subHeadingTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/message_subject"
+            android:textColor="@color/subheading_text_color" />
+
+        <TextView
+            android:id="@+id/message_body"
+            style="@style/subHeadingTextStyle"
+            android:textColor="@color/subheading_text_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/message_body" />
+
+    </LinearLayout>
+
+</LinearLayout>
